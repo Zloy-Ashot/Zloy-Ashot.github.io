@@ -53,11 +53,9 @@
             console.error('Your browser does not support ecmascript 2015 standard');
             isGoodBrowser = false;
         }
-        if(isGoodBrowser) {
-            window.onload = function () {
-                window.game2020 = new Game('.game-field-wrap');
-            };
-        }
+        window.onload = function () {
+            window.game2020 = new Game('.game-field-wrap');
+        };
     </script>
     <script src="2020.js"></script>
 </body>

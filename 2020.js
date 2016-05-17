@@ -24,6 +24,11 @@ Element.prototype.trigger = window.trigger = function(eventName){
     e.initEvent(eventName);
     this.dispatchEvent(e);
 };
+NodeList.prototype.forEach = function(cb){
+    "use strict";
+    for(var i = 0; i < this.length; ++i)
+        cb.call(this, this[i], i)
+};
 
 
 class EventEmitter{
