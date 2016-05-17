@@ -102,7 +102,7 @@ class Game extends EventEmitter{
         HTCell.classList.add('cell');
         HTCell.classList.add('empty');
         game.data.fieldSize = 10;
-        for (var i = 0; i < (game.data.fieldSize**2); ++i) {
+        for (var i = 0; i < (game.data.fieldSize*game.data.fieldSize); ++i) {
             if(Math.round(i/game.data.fieldSize-0.5)*game.data.fieldSize === i){
                 game.HT.cells.push([]);
             }
